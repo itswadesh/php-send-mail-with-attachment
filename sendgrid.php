@@ -2,18 +2,22 @@
 include('config.php');
 function sendmail(){
 $url = 'https://api.sendgrid.com/';
-
 $filePath = dirname(__FILE__);
 
 $params = array(
-    'api_user'  => $user,
-    'api_key'   => $pass,
+    'api_user'  => $SENDGRID_USERNAME,
+    'api_key'   => $SENDGRID_PASSWORD,
     'to'        => 'support@codenx.com',
-    'subject'   => 'test of file sends',
-    'html'      => '<p> the HTML </p>',
-    'text'      => 'the plain text',
+    'subject'   => 'ShopNx - The Single Page eCommerce Website',
+    'html'      => '
+    <ul> 
+      <li>Responsive Design</li> 
+      <li>Higher Scalability</li> 
+      <li>Ergonomically Designed</li> 
+    </ul>',
+    'text'      => 'Experience faster shopping',
     'from'      => 'demo@codenx.com',
-    'files['.$fileName.']' => '@'.$filePath.'/'.$fileName
+    'files['.$FILE_NAME.']' => '@'.$filePath.'/'.$FILE_NAME
   );
 
 print_r($params.message);
