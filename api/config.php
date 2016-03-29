@@ -1,6 +1,6 @@
 <?php
   define('DATABASE_HOST', "localhost");
-  define('DATABASE_NAME', "demo");
+  define('DATABASE_NAME', "demos");
   define('DATABASE_USERNAME', "root");
   define('DATABASE_PASSWORD', "root");
 
@@ -9,7 +9,7 @@
   define('SENDGRID_USERNAME', "YOUR_SENDGRID_USERNAME");
   define('SENDGRID_PASSWORD', "YOUR_SENDGRID_PASSWORD");
 
-  define('FROM', "<AngularCode> demo@angularcode.com");
+  define('FROM', "demo@angularcode.com");
   define('TO', "support@codenx.com");
   define('SUBJECT', "ShopNx - The Single Page eCommerce Website");
   define('CONTENT', "

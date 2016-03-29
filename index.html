@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Send email using NodeJS</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body ng-app="sendmailApp" ng-controller="MailController">
+  <header>
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="http://www.angularcode.com/" class="brand-logo">AngularCode | Demo</a>
+        <ul class="right">
+          <li><a class="dropdown-button" href="http://www.angularcode.com/send-email-from-website-using-angularjs-and-nodejs" 
+          data-activates="dropdown1">Tutorial<i class="material-icons left">airplay</i></a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="section no-pad-bot valign-wrapper">
+      <div class="container">
+        <br><br>
+        <div class="center"><i class="material-icons center large">attachment</i>
+          <h1 class="header green-text">Send me the file as attachment</h1>
+        </div>
+        <div class="center success">
+        <div class="preloader-wrapper small active" ng-if="loading">
+          <div class="spinner-layer spinner-green-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+          <div ng-cloak ng-if="!loading && serverMessage"><i class="material-icons center">done</i>{{serverMessage}}</div>
+          </div>
+        <div class="row center">
+          <div class="input-field col s12 z-depth-2">
+            <input ng-model="mail.to" class="materialize-text" placeholder="support@codenx.com"></input>
+          </div>
+        </div>
+        <div class="row center">
+          <button ng-click="send(mail)" class="btn-large waves-effect waves-light green" ng-disabled="loading"><i class="material-icons left">send</i>
+          <div class="circle"></div>Send Mail</button>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+  </main>
+  <footer class="page-footer orange">
+    <div class="footer-copyright">
+      <div class="container center">
+      Crafted by <a class="orange-text text-lighten-3" href="http://angularcode.com">AngularCode</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
