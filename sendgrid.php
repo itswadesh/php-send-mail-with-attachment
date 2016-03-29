@@ -5,19 +5,13 @@ $url = 'https://api.sendgrid.com/';
 $filePath = dirname(__FILE__);
 
 $params = array(
-    'api_user'  => $SENDGRID_USERNAME,
-    'api_key'   => $SENDGRID_PASSWORD,
-    'to'        => 'support@codenx.com',
-    'subject'   => 'ShopNx - The Single Page eCommerce Website',
-    'html'      => '
-    <ul> 
-      <li>Responsive Design</li> 
-      <li>Higher Scalability</li> 
-      <li>Ergonomically Designed</li> 
-    </ul>',
-    'text'      => 'Experience faster shopping',
-    'from'      => 'demo@codenx.com',
-    'files['.$FILE_NAME.']' => '@'.$filePath.'/'.$FILE_NAME
+    'api_user'  => SENDGRID_USERNAME,
+    'api_key'   => SENDGRID_PASSWORD,
+    'from'      => FROM,
+    'to'        => TO,
+    'subject'   => SUBJECT,
+    'html'      => CONTENT,
+    'files['.ATTACHED_FILENAME.']' => '@'.$filePath.'/'.ATTACHED_FILENAME
   );
 
 print_r($params.message);

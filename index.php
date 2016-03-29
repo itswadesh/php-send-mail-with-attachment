@@ -1,12 +1,11 @@
 <?php
 include('config.php');
 include('database.php');
-include('sendgrid.php');
 $database = new Database();
 $result = $database->runQuery("SELECT name,author FROM books");
 $header = $database->runQuery("SELECT UCASE(`COLUMN_NAME`) 
 FROM `INFORMATION_SCHEMA`.`COLUMNS` 
-WHERE `TABLE_SCHEMA`='crud' 
+WHERE `TABLE_SCHEMA`='demo' 
 AND `TABLE_NAME`='books'
 and `COLUMN_NAME` in ('name','author')");
 
@@ -24,5 +23,7 @@ foreach($result as $row) {
 	foreach($row as $column)
 		$pdf->Cell(95,12,$column,1);
 }
-$pdf->Output($ATTACHED_FILENAME,'F');
+$pdf->Output(ATTACHED_FILENAME,'F');
+require('sendgrid.php');
+sendmail();
 ?>

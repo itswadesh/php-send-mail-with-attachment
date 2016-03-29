@@ -2,7 +2,7 @@
 include('config.php');
 class Database {
 	function runQuery($sql) {
-		$conn = new mysqli($DATABASE_HOST,$DATABASE_USERNAME,$DATABASE_PASSWORD,$DATABASE_NAME);
+		$conn = new mysqli(DATABASE_HOST,DATABASE_USERNAME,DATABASE_PASSWORD,DATABASE_NAME);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     } 
