@@ -19,9 +19,8 @@ The following settings need to be changed at **config.php**
 
   define('FROM', "demo@angularcode.com");
   define('TO', "support@codenx.com");
-  define('SUBJECT', "ShopNx - The Single Page eCommerce Website");
-  define('CONTENT', "<h1>Experience faster shopping with ShopNx</h1>
-      <ul> <li>Responsive Design</li><li>Higher Scalability</li><li>Ergonomically Designed</li></ul>");
+  define('SUBJECT', "The title");
+  define('CONTENT', "The content");
 
 </pre>
 
