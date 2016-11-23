@@ -1,5 +1,7 @@
 # Send PDF document as email attachment using PHP
 
+The full tutorial can be foud @ http://angularcode.com/send-pdf-attachment-email-using-php/
+
 ##Import data
 Import books.sql into your MySQL
 This will create necessary tables and insert sample data into it.
